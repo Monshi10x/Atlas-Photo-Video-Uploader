@@ -1,0 +1,39 @@
+Atlas Photo & Video Studio 6.0 — 30 October 2026
+
+PASS: 67 automated tests: all 59 prior checks plus 8 advanced-axis tests.
+PASS: Known synthetic subpixel translation/tilt with a nonvertical reference: robust, reference and hybrid trackers meet <0.07 degree angular RMS and <0.15 px position RMS error tolerances.
+PASS: A return to the reference image produces the same pose after intervening motion: no cumulative tracking drift.
+PASS: Failed ECC registration falls back in Hybrid and rejects in Reference-only; outlier blobs, internal highlights and moving flutes outside the band do not take over synthetic geometry.
+PASS: Continuous subpixel linear and cubic interpolation: exact identity, distinct very small shifts, premultiplied alpha and no coloured halo from hidden RGB pixels.
+PASS: Fixed second-pass lock pins the measured axis and position; strategy/reference/quality/mode fields validate and round-trip through JSON.
+PASS: Actual encoded robust/reference/hybrid pipelines retain frame count; high-precision transparent processing and final MOV export retain alpha and the selected frame grid.
+PASS: Native Linux Tk UI: advanced tabs, recommended strategy, nonzero reference capture, captured/ideal mask preview, saving a full-resolution mask PNG, new recipe round-trip, fixed mode, status, comparison and cleanup. Layout inspected. Smoothing control is disabled in lock mode.
+PASS: Full 436-frame real-clip combinations completed: v5.2 legacy/smooth, reference/cubic/lock, hybrid/cubic/lock and hybrid/subpixel/lock. Every completed combination retained all frames. Robust-only was validated with synthetic known motion and actual encoded fixtures; its additional full-clip cubic benchmark was not completed.
+PASS: Hybrid/cubic/lock compared with v5.2 using the legacy image evaluator: angular jitter RMS 0.024185 -> 0.018342 degrees (24.16% reduction), sideways jitter RMS 0.024746 -> 0.021557 px. The multi-band evaluator also showed reduced jitter. These are image estimates, not independent physical ground truth; all measurements and completed combinations are in examples/MVI_5090_v6_benchmark.json.
+PASS: New side-by-side comparison verified at 436 frames / 59.94 fps. Same crops, display magnification, playback speed and colour treatment on both sides.
+PASS: A separate second pass reads the completed first-pass file (verified by checksum and an unavailable original-source fixture), not the original video or navigation proxies.
+PASS: Residual trajectory smoothing reduces synthetic jitter while retaining slow drift; rigid transforms, strength, limits, validation and tracking-gap handling verified.
+PASS: Actual automatic two-pass pipeline preserves its first-pass file and exact frame grid; standalone processing ownership/cleanup verified.
+PASS: Transparent second-pass MOV retains alpha and the final graded export retains its exact selected frame count; the loop sidecar includes second-pass information.
+PASS: Real MVI_5090: both passes track/retain all 436 frames with no interpolation or safety-limit events. Encoded-output residual sideways RMS 0.028895 -> 0.024746 px and tilt RMS 0.028656 -> 0.024185 degrees using the same tracker. Total drift/extreme ranges need not decrease; these are image estimates of rapid residual jitter, not independent physical ground truth.
+PASS: Native Linux Tk UI: automatic toggle, second-pass numeric controls, preset round-trip, standalone pass on an existing rendered result, retained first-pass ownership, comparison toggling and shutdown with pending video-preview callbacks. Layout visually inspected.
+PASS: Shaft measurement ignores flutes outside the selected straight-shank band; synthetic rendered tilt/drift is corrected with rigid transforms.
+PASS: Current-angle Smart Aim correction removes the residual created by smoothing the correction angle.
+PASS: Missing/long-gap tracking is rejected; short interpolation and safety limits are reported; invalid shaft settings are rejected.
+PASS: Render feedback preserves partial-strength semantics and angle/shift bounds.
+PASS: Real attached MVI_5090 - LOOP2.mp4: 1080 x 606, 59.94 fps, 436/436 reliable frames, 0 interpolated frames, 0 safety-limited frames.
+PASS: Real processed output remeasured by the same shaft tracker: axis drift 7.3305 -> 0.3121 px; angle range [-0.0583, 1.1680] -> [-0.1634, 0.1443] degrees. These are image-tracking estimates, not independent physical ground truth.
+PASS: Corrected example and before/after comparison both retain all 436 source frames, verified after encoding. The pre-branded source is cropped to exclude its baked logo. No colour edits or loop retiming.
+PASS: Native Linux Tk UI smoke: source-resolution preview, frame 360 inspection, interactive band dragging, settings import/export round-trip, applying settings, preservation/disable of shaft mode in the background dialog. Layout visually inspected.
+PASS: Neutral recipe is pixel-identical; grading preserves alpha.
+PASS: Exposure, white balance, black balance and HSL behavior; every one of 58 numeric controls exercised.
+PASS: Curves/preset validation and JSON round-trip; invalid/unbounded/nonfinite settings rejected.
+PASS: Photo export bakes grading and automatically writes an importable settings sidecar.
+PASS: Actual graded MP4 export retains exact selected frame count; the logo remains red when the underlying footage is graded monochrome.
+PASS: Actual graded ProRes MOV export preserves alpha with logo overlay.
+PASS: Native Linux Tk UI smoke test: dialog construction, async preview, neutral eyedropper, preset round-trip, apply/save and image-sidecar export. Layout visually inspected.
+PASS: Python compilation.
+
+Not executed: Windows-native rendering, EXE build, live Shopify uploads or paid OpenAI requests.
+Advanced registration and both passes use rigid 2D alignment; they cannot reconstruct physical bending, depth tilt, foreshortening, blur or changing tip height. The captured reference mask models the selected stable shank, not changing cutting flutes. See WHATS_NEW_v6.md and earlier version notes.
+Controls are custom display-referred RGB implementations, not Adobe-equivalent RAW algorithms. No Lightroom XMP compatibility or full Lightroom feature parity is claimed. See WHATS_NEW_v5.md for scope and settings-file behavior.

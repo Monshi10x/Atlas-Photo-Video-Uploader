@@ -1,0 +1,82 @@
+{
+  "settings": {
+    "stabilize": false,
+    "smart_aim": false,
+    "remove_background": false,
+    "key_color": "#ffffff",
+    "background": "#ffffff",
+    "tolerance": 35,
+    "feather": 1.0,
+    "strength": 100,
+    "smoothing": 0.25,
+    "max_shift": 5,
+    "max_angle": 5,
+    "roi": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "target_x": -1,
+    "target_y": -1,
+    "border_crop": 0,
+    "edge": 1080,
+    "axis_lock": true,
+    "axis_roi": [
+      0.46,
+      0.49,
+      0.08,
+      0.36
+    ],
+    "axis_contrast": 18,
+    "tracking_edge": 1080
+  },
+  "tracked_frames": 436,
+  "total_frames": 436,
+  "interpolated_frames": 0,
+  "size": [
+    1080,
+    606
+  ],
+  "shaft_lock": {
+    "method": "straight-shaft subpixel edges + robust row centre line",
+    "band": [
+      0.46,
+      0.49,
+      0.08,
+      0.36
+    ],
+    "tracking_size": [
+      1080,
+      606
+    ],
+    "input_angle_range_deg": [
+      -0.05834780462969808,
+      1.168014498316811
+    ],
+    "input_axis_drift_px": 7.33050537109375,
+    "safety_limited_frames": 0,
+    "interpolated_frames": 0,
+    "vertical_position": "fixed band anchor; no scale, depth or tip-height correction",
+    "render_refined_frames": 436
+  },
+  "output_measured_frames": 436,
+  "output_angle_range_deg": [
+    -0.16342343870033013,
+    0.14433988124772834
+  ],
+  "output_axis_drift_px": 0.3121337890625,
+  "sample_output": {
+    "frames": 436,
+    "fps": 59.94,
+    "crop": [
+      350,
+      0,
+      400,
+      606
+    ],
+    "audio": "removed",
+    "colour": "unchanged",
+    "note": "Full original loop preserved. Baked logo excluded from crop. No depth/scale/height correction."
+  }
+}

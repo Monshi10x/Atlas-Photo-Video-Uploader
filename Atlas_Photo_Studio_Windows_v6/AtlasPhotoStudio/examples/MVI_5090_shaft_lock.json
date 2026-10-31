@@ -1,0 +1,36 @@
+{
+  "format": "atlas-shaft-lock",
+  "version": 1,
+  "settings": {
+    "stabilize": false,
+    "smart_aim": false,
+    "remove_background": false,
+    "key_color": "#ffffff",
+    "background": "#ffffff",
+    "tolerance": 35,
+    "feather": 1.0,
+    "strength": 100,
+    "smoothing": 0.25,
+    "max_shift": 5,
+    "max_angle": 5,
+    "roi": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "target_x": -1,
+    "target_y": -1,
+    "border_crop": 0,
+    "edge": 1080,
+    "axis_lock": true,
+    "axis_roi": [
+      0.46,
+      0.49,
+      0.08,
+      0.36
+    ],
+    "axis_contrast": 18,
+    "tracking_edge": 1080
+  }
+}

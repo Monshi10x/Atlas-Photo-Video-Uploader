@@ -1,0 +1,105 @@
+{
+  "format": "atlas-colour",
+  "version": 1,
+  "working_space": "display-referred sRGB",
+  "adjustments": {
+    "exposure": 0.2,
+    "contrast": 12.0,
+    "highlights": -15.0,
+    "shadows": 8.0,
+    "whites": 0.0,
+    "blacks": 0.0,
+    "gamma": 1.0,
+    "temperature": 0.0,
+    "tint": 0.0,
+    "vibrance": 8.0,
+    "saturation": 0.0,
+    "red_gain": 0.0,
+    "green_gain": 0.0,
+    "blue_gain": 0.0,
+    "red_black": 0.0,
+    "green_black": 0.0,
+    "blue_black": 0.0,
+    "texture": 0.0,
+    "clarity": 5.0,
+    "dehaze": 0.0,
+    "sharpen": 10.0,
+    "noise": 0.0,
+    "colour_noise": 0.0,
+    "vignette": 0.0,
+    "vignette_midpoint": 50.0,
+    "grain": 0.0,
+    "monochrome": 0.0,
+    "shadow_hue": 0.0,
+    "shadow_sat": 0.0,
+    "midtone_hue": 0.0,
+    "midtone_sat": 0.0,
+    "highlight_hue": 0.0,
+    "highlight_sat": 0.0,
+    "grading_balance": 0.0,
+    "red_hue": 0.0,
+    "red_sat": 0.0,
+    "red_lum": 0.0,
+    "orange_hue": 0.0,
+    "orange_sat": 0.0,
+    "orange_lum": 0.0,
+    "yellow_hue": 0.0,
+    "yellow_sat": 0.0,
+    "yellow_lum": 0.0,
+    "green_hue": 0.0,
+    "green_sat": 0.0,
+    "green_lum": 0.0,
+    "aqua_hue": 0.0,
+    "aqua_sat": 0.0,
+    "aqua_lum": 0.0,
+    "blue_hue": 0.0,
+    "blue_sat": 0.0,
+    "blue_lum": 0.0,
+    "purple_hue": 0.0,
+    "purple_sat": 0.0,
+    "purple_lum": 0.0,
+    "magenta_hue": 0.0,
+    "magenta_sat": 0.0,
+    "magenta_lum": 0.0,
+    "curve_master": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    "curve_red": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    "curve_green": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    "curve_blue": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ]
+  }
+}

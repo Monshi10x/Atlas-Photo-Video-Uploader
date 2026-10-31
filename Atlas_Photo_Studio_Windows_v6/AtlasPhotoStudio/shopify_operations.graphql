@@ -1,0 +1,11 @@
+query Search($q: String!) { products(first: 30, query: $q) { nodes { id title handle } } }
+
+query Product($id: ID!, $cursor: String) { product(id: $id) { id title media(first: 100, after: $cursor) { nodes { id alt status } pageInfo { hasNextPage endCursor } } } }
+
+mutation Stage($input: [StagedUploadInput!]!) { stagedUploadsCreate(input: $input) { stagedTargets { url resourceUrl parameters { name value } } userErrors { field message } } }
+
+mutation Attach($product: ProductUpdateInput!, $media: [CreateMediaInput!]) { productUpdate(product: $product, media: $media) { product { id } userErrors { field message } } }
+
+mutation Reorder($id: ID!, $moves: [MoveInput!]!) { productReorderMedia(id: $id, moves: $moves) { job { id done } mediaUserErrors { field message } } }
+
+query Job($id: ID!) { job(id: $id) { id done } }

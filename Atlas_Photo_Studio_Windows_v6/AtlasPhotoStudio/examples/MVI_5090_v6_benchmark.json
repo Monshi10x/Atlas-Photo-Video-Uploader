@@ -1,0 +1,607 @@
+{
+  "source": "MVI_5090 - LOOP2.mp4",
+  "comparison": "v5.2 legacy + smooth vs advanced strategies + fixed vertical finish",
+  "selected": "hybrid with cubic resampling and fixed second-pass lock",
+  "evaluation_note": "Image-based estimates, not independent physical ground truth. Two evaluators differ; synthetic tests use known motion. Full-clip completed combinations are listed; robust-only also tested against known synthetic motion and encoded fixtures.",
+  "measured_angular_jitter_reduction_percent": 24.16155498811755,
+  "results": {
+    "legacy": {
+      "metrics": {
+        "legacy_eval": {
+          "frames": 436,
+          "drift_px": 0.3128662109375,
+          "angle_range_deg": [
+            -0.1385068952186844,
+            0.18079261298403204
+          ],
+          "angle_rms_deg": 0.030324058179710907,
+          "jitter_rms_px": 0.024745521108496357,
+          "jitter_rms_deg": 0.024185000095345813
+        },
+        "multi_band_eval": {
+          "frames": 436,
+          "drift_px": 0.3304471884217719,
+          "angle_range_deg": [
+            -0.11879656520705639,
+            0.1834805165797793
+          ],
+          "angle_rms_deg": 0.043243456310546796,
+          "jitter_rms_px": 0.025008830622914802,
+          "jitter_rms_deg": 0.0252859762325081
+        }
+      },
+      "processing": {
+        "settings": {
+          "stabilize": false,
+          "smart_aim": false,
+          "remove_background": false,
+          "key_color": "#ffffff",
+          "background": "#ffffff",
+          "tolerance": 35,
+          "feather": 1.0,
+          "strength": 100,
+          "smoothing": 0.25,
+          "max_shift": 5,
+          "max_angle": 5,
+          "roi": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_x": -1,
+          "target_y": -1,
+          "border_crop": 0,
+          "edge": 1080,
+          "axis_lock": true,
+          "axis_roi": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "axis_contrast": 18,
+          "tracking_edge": 1080,
+          "second_pass": true,
+          "second_strength": 100,
+          "second_smoothing": 0.12,
+          "second_max_shift": 1,
+          "second_max_angle": 0.5,
+          "axis_strategy": "legacy",
+          "axis_reference": 0,
+          "axis_mask_min_score": 0.98,
+          "render_quality": "fast",
+          "second_mode": "smooth"
+        },
+        "tracked_frames": 436,
+        "total_frames": 436,
+        "interpolated_frames": 0,
+        "size": [
+          1080,
+          606
+        ],
+        "shaft_lock": {
+          "method": "straight-shaft subpixel edges + robust row centre line",
+          "band": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "tracking_size": [
+            1080,
+            606
+          ],
+          "input_angle_range_deg": [
+            -0.05834780462969808,
+            1.168014498316811
+          ],
+          "input_axis_drift_px": 7.33050537109375,
+          "safety_limited_frames": 0,
+          "interpolated_frames": 0,
+          "vertical_position": "fixed band anchor; no scale, depth or tip-height correction",
+          "render_refined_frames": 436
+        },
+        "second_pass": {
+          "input": "completed first-pass rendered file",
+          "method": "subpixel shaft residuals against a Gaussian-smoothed trajectory",
+          "strength_percent": 100,
+          "smoothing_seconds": 0.12,
+          "max_shift_output_pixels": 1,
+          "max_angle_degrees": 0.5,
+          "tracked_frames": 436,
+          "interpolated_frames": 0,
+          "safety_limited_frames": 0,
+          "measured_input_axis_drift_px": 0.3121337890625,
+          "measured_input_angle_range_deg": [
+            -0.16342343870033013,
+            0.14433988124772834
+          ],
+          "max_applied_shift_px": 0.1550396283948885,
+          "max_applied_angle_deg": 0.1668031509231902,
+          "tracking_size": [
+            1080,
+            606
+          ],
+          "corrections": "sideways shaft-axis jitter and tilt; axial height is unobservable in this band",
+          "boundary": "reflect; find loop points after both passes",
+          "mode": "smooth",
+          "axis_strategy": "legacy",
+          "tracking_band": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "input_sha256": "b81e60c4a4155cc4d4e1dac78d56a5ca98f7e017da4d9653533f32f8dc4794e4"
+        }
+      },
+      "seconds": 41.43378030000076
+    },
+    "reference": {
+      "metrics": {
+        "legacy_eval": {
+          "frames": 436,
+          "drift_px": 0.2882080078125,
+          "angle_range_deg": [
+            -0.1820288648303533,
+            0.07456266513773017
+          ],
+          "angle_rms_deg": 0.03045518962049168,
+          "jitter_rms_px": 0.02056578165406904,
+          "jitter_rms_deg": 0.020401733063199527
+        },
+        "multi_band_eval": {
+          "frames": 436,
+          "drift_px": 0.1982808333500543,
+          "angle_range_deg": [
+            -0.16024067681522725,
+            0.1169722297215552
+          ],
+          "angle_rms_deg": 0.04320022855607759,
+          "jitter_rms_px": 0.016442489279348323,
+          "jitter_rms_deg": 0.02155252718969185
+        }
+      },
+      "processing": {
+        "settings": {
+          "stabilize": false,
+          "smart_aim": false,
+          "remove_background": false,
+          "key_color": "#ffffff",
+          "background": "#ffffff",
+          "tolerance": 35,
+          "feather": 1.0,
+          "strength": 100,
+          "smoothing": 0.25,
+          "max_shift": 5,
+          "max_angle": 5,
+          "roi": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_x": -1,
+          "target_y": -1,
+          "border_crop": 0,
+          "edge": 1080,
+          "axis_lock": true,
+          "axis_roi": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "axis_contrast": 18,
+          "tracking_edge": 1080,
+          "second_pass": true,
+          "second_strength": 100,
+          "second_smoothing": 0.12,
+          "second_max_shift": 1,
+          "second_max_angle": 0.5,
+          "axis_strategy": "reference",
+          "axis_reference": 0,
+          "axis_mask_min_score": 0.98,
+          "render_quality": "cubic",
+          "second_mode": "lock"
+        },
+        "tracked_frames": 436,
+        "total_frames": 436,
+        "interpolated_frames": 0,
+        "size": [
+          1080,
+          606
+        ],
+        "shaft_lock": {
+          "method": "straight-shaft subpixel edges + robust row centre line",
+          "band": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "tracking_size": [
+            1080,
+            606
+          ],
+          "input_angle_range_deg": [
+            -0.15901386855399194,
+            1.139282246053066
+          ],
+          "input_axis_drift_px": 7.337140445956379,
+          "safety_limited_frames": 0,
+          "interpolated_frames": 0,
+          "vertical_position": "fixed band anchor; no scale, depth or tip-height correction",
+          "advanced_tracking": {
+            "strategy": "reference",
+            "reference_frame": 0,
+            "reference_type": "captured shank geometry rigidly made vertical; fixed reference for every frame",
+            "registration": "ECC Euclidean; no scale/shear and no cumulative frame-to-frame drift",
+            "minimum_mask_score": 0.98,
+            "edge_frames": 436,
+            "mask_frames": 436,
+            "fallback_frames": 0,
+            "rejected_frames": 0
+          },
+          "render_refined_frames": 0
+        },
+        "second_pass": {
+          "input": "completed first-pass rendered file",
+          "method": "subpixel shaft residuals against a Gaussian-smoothed trajectory",
+          "strength_percent": 100,
+          "smoothing_seconds": 0.12,
+          "max_shift_output_pixels": 1,
+          "max_angle_degrees": 0.5,
+          "tracked_frames": 436,
+          "interpolated_frames": 0,
+          "safety_limited_frames": 0,
+          "measured_input_axis_drift_px": 0.21779163483529373,
+          "measured_input_angle_range_deg": [
+            -0.1777498779401897,
+            0.20289001710379828
+          ],
+          "max_applied_shift_px": 0.13646618142138323,
+          "max_applied_angle_deg": 0.20289001710379828,
+          "tracking_size": [
+            1080,
+            606
+          ],
+          "corrections": "sideways shaft-axis jitter and tilt; axial height is unobservable in this band",
+          "boundary": "reflect; find loop points after both passes",
+          "mode": "lock",
+          "axis_strategy": "reference",
+          "tracking_band": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "input_sha256": "3cde099bf1568f08db1fc64731955886d9fb4201ee32d9622cba62b8e60a094f",
+          "advanced_tracking": {
+            "strategy": "reference",
+            "reference_frame": 0,
+            "reference_type": "captured shank geometry rigidly made vertical; fixed reference for every frame",
+            "registration": "ECC Euclidean; no scale/shear and no cumulative frame-to-frame drift",
+            "minimum_mask_score": 0.98,
+            "edge_frames": 436,
+            "mask_frames": 436,
+            "fallback_frames": 0,
+            "rejected_frames": 0
+          }
+        }
+      },
+      "seconds": 418.14356247199976
+    },
+    "hybrid": {
+      "metrics": {
+        "legacy_eval": {
+          "frames": 436,
+          "drift_px": 0.28948974609375,
+          "angle_range_deg": [
+            -0.17310865676854054,
+            0.06284207074462747
+          ],
+          "angle_rms_deg": 0.02442658274260165,
+          "jitter_rms_px": 0.021557220126347292,
+          "jitter_rms_deg": 0.018341527998432552
+        },
+        "multi_band_eval": {
+          "frames": 436,
+          "drift_px": 0.22528115556133343,
+          "angle_range_deg": [
+            -0.08065213066274647,
+            0.1285944214669197
+          ],
+          "angle_rms_deg": 0.027688896852227123,
+          "jitter_rms_px": 0.014017670998318051,
+          "jitter_rms_deg": 0.015597735197138692
+        }
+      },
+      "processing": {
+        "settings": {
+          "stabilize": false,
+          "smart_aim": false,
+          "remove_background": false,
+          "key_color": "#ffffff",
+          "background": "#ffffff",
+          "tolerance": 35,
+          "feather": 1.0,
+          "strength": 100,
+          "smoothing": 0.25,
+          "max_shift": 5,
+          "max_angle": 5,
+          "roi": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_x": -1,
+          "target_y": -1,
+          "border_crop": 0,
+          "edge": 1080,
+          "axis_lock": true,
+          "axis_roi": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "axis_contrast": 18,
+          "tracking_edge": 1080,
+          "second_pass": true,
+          "second_strength": 100,
+          "second_smoothing": 0.12,
+          "second_max_shift": 1,
+          "second_max_angle": 0.5,
+          "axis_strategy": "hybrid",
+          "axis_reference": 0,
+          "axis_mask_min_score": 0.98,
+          "render_quality": "cubic",
+          "second_mode": "lock"
+        },
+        "tracked_frames": 436,
+        "total_frames": 436,
+        "interpolated_frames": 0,
+        "size": [
+          1080,
+          606
+        ],
+        "shaft_lock": {
+          "method": "straight-shaft subpixel edges + robust row centre line",
+          "band": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "tracking_size": [
+            1080,
+            606
+          ],
+          "input_angle_range_deg": [
+            -0.10753059914216391,
+            1.1372970974067833
+          ],
+          "input_axis_drift_px": 7.337123810589105,
+          "safety_limited_frames": 0,
+          "interpolated_frames": 0,
+          "vertical_position": "fixed band anchor; no scale, depth or tip-height correction",
+          "advanced_tracking": {
+            "strategy": "hybrid",
+            "reference_frame": 0,
+            "reference_type": "captured shank geometry rigidly made vertical; fixed reference for every frame",
+            "registration": "ECC Euclidean; no scale/shear and no cumulative frame-to-frame drift",
+            "minimum_mask_score": 0.98,
+            "edge_frames": 436,
+            "mask_frames": 436,
+            "fallback_frames": 0,
+            "rejected_frames": 0
+          },
+          "render_refined_frames": 0
+        },
+        "second_pass": {
+          "input": "completed first-pass rendered file",
+          "method": "subpixel shaft residuals against a Gaussian-smoothed trajectory",
+          "strength_percent": 100,
+          "smoothing_seconds": 0.12,
+          "max_shift_output_pixels": 1,
+          "max_angle_degrees": 0.5,
+          "tracked_frames": 436,
+          "interpolated_frames": 0,
+          "safety_limited_frames": 0,
+          "measured_input_axis_drift_px": 0.19565976539718122,
+          "measured_input_angle_range_deg": [
+            -0.11625913470420135,
+            0.11376482951180099
+          ],
+          "max_applied_shift_px": 0.12575268201931067,
+          "max_applied_angle_deg": 0.11625913470420135,
+          "tracking_size": [
+            1080,
+            606
+          ],
+          "corrections": "sideways shaft-axis jitter and tilt; axial height is unobservable in this band",
+          "boundary": "reflect; find loop points after both passes",
+          "mode": "lock",
+          "axis_strategy": "hybrid",
+          "tracking_band": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "input_sha256": "aeab031cd5fdb47dd41f08802647584ff29b4327514d86b2bf54e2865c9264b0",
+          "advanced_tracking": {
+            "strategy": "hybrid",
+            "reference_frame": 0,
+            "reference_type": "captured shank geometry rigidly made vertical; fixed reference for every frame",
+            "registration": "ECC Euclidean; no scale/shear and no cumulative frame-to-frame drift",
+            "minimum_mask_score": 0.98,
+            "edge_frames": 436,
+            "mask_frames": 436,
+            "fallback_frames": 0,
+            "rejected_frames": 0
+          }
+        }
+      },
+      "seconds": 391.650675545
+    },
+    "hybrid_subpixel": {
+      "metrics": {
+        "legacy_eval": {
+          "frames": 436,
+          "drift_px": 0.35528564453125,
+          "angle_range_deg": [
+            -0.21785320983196513,
+            0.16304778134513082
+          ],
+          "angle_rms_deg": 0.03662895080664002,
+          "jitter_rms_px": 0.02009439541121554,
+          "jitter_rms_deg": 0.022246450777880573
+        },
+        "multi_band_eval": {
+          "frames": 436,
+          "drift_px": 0.191455365082561,
+          "angle_range_deg": [
+            -0.11577913970802652,
+            0.07603253977048302
+          ],
+          "angle_rms_deg": 0.03867306958129869,
+          "jitter_rms_px": 0.013156039250171185,
+          "jitter_rms_deg": 0.01607210218135974
+        }
+      },
+      "processing": {
+        "settings": {
+          "stabilize": false,
+          "smart_aim": false,
+          "remove_background": false,
+          "key_color": "#ffffff",
+          "background": "#ffffff",
+          "tolerance": 35,
+          "feather": 1.0,
+          "strength": 100,
+          "smoothing": 0.25,
+          "max_shift": 5,
+          "max_angle": 5,
+          "roi": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_x": -1,
+          "target_y": -1,
+          "border_crop": 0,
+          "edge": 1080,
+          "axis_lock": true,
+          "axis_roi": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "axis_contrast": 18,
+          "tracking_edge": 1080,
+          "second_pass": true,
+          "second_strength": 100,
+          "second_smoothing": 0.12,
+          "second_max_shift": 1,
+          "second_max_angle": 0.5,
+          "axis_strategy": "hybrid",
+          "axis_reference": 0,
+          "axis_mask_min_score": 0.98,
+          "render_quality": "subpixel",
+          "second_mode": "lock"
+        },
+        "tracked_frames": 436,
+        "total_frames": 436,
+        "interpolated_frames": 0,
+        "size": [
+          1080,
+          606
+        ],
+        "shaft_lock": {
+          "method": "straight-shaft subpixel edges + robust row centre line",
+          "band": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "tracking_size": [
+            1080,
+            606
+          ],
+          "input_angle_range_deg": [
+            -0.10753059914216391,
+            1.1372970974067833
+          ],
+          "input_axis_drift_px": 7.337123810589105,
+          "safety_limited_frames": 0,
+          "interpolated_frames": 0,
+          "vertical_position": "fixed band anchor; no scale, depth or tip-height correction",
+          "advanced_tracking": {
+            "strategy": "hybrid",
+            "reference_frame": 0,
+            "reference_type": "captured shank geometry rigidly made vertical; fixed reference for every frame",
+            "registration": "ECC Euclidean; no scale/shear and no cumulative frame-to-frame drift",
+            "minimum_mask_score": 0.98,
+            "edge_frames": 436,
+            "mask_frames": 436,
+            "fallback_frames": 0,
+            "rejected_frames": 0
+          },
+          "render_refined_frames": 0
+        },
+        "second_pass": {
+          "input": "completed first-pass rendered file",
+          "method": "subpixel shaft residuals against a Gaussian-smoothed trajectory",
+          "strength_percent": 100,
+          "smoothing_seconds": 0.12,
+          "max_shift_output_pixels": 1,
+          "max_angle_degrees": 0.5,
+          "tracked_frames": 436,
+          "interpolated_frames": 0,
+          "safety_limited_frames": 0,
+          "measured_input_axis_drift_px": 0.24963672158298778,
+          "measured_input_angle_range_deg": [
+            -0.085714849751726,
+            0.14403353198867466
+          ],
+          "max_applied_shift_px": 0.1387170014725143,
+          "max_applied_angle_deg": 0.14403353198867466,
+          "tracking_size": [
+            1080,
+            606
+          ],
+          "corrections": "sideways shaft-axis jitter and tilt; axial height is unobservable in this band",
+          "boundary": "reflect; find loop points after both passes",
+          "mode": "lock",
+          "axis_strategy": "hybrid",
+          "tracking_band": [
+            0.46,
+            0.49,
+            0.08,
+            0.36
+          ],
+          "input_sha256": "f90036ddee6156e6caea33e4c6e4aade61842a58f6653a5707d34c47d4a7b118",
+          "advanced_tracking": {
+            "strategy": "hybrid",
+            "reference_frame": 0,
+            "reference_type": "captured shank geometry rigidly made vertical; fixed reference for every frame",
+            "registration": "ECC Euclidean; no scale/shear and no cumulative frame-to-frame drift",
+            "minimum_mask_score": 0.98,
+            "edge_frames": 436,
+            "mask_frames": 436,
+            "fallback_frames": 0,
+            "rejected_frames": 0
+          }
+        }
+      },
+      "seconds": 179.8198648839998
+    }
+  }
+}
